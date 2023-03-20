@@ -17,12 +17,7 @@ dotenv.config();
 dbConnect();
 
 // back🤝front
-app.use(
-  cors({
-    credentials: true,
-    origin: "https://icygb-shop.onrender.com/",
-  })
-);
+app.use(cors());
 
 // allow json
 app.use(express.json());
