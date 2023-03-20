@@ -20,7 +20,7 @@ dbConnect();
 app.use(
   cors({
     credentials: true,
-    origin: "https://icygb.onrender.com/",
+    origin: "https://icygb.onrender.com",
   })
 );
 
