@@ -17,7 +17,12 @@ dotenv.config();
 dbConnect();
 
 // back🤝front
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://icygb.onrender.com/",
+  })
+);
 
 // allow json
 app.use(express.json());
