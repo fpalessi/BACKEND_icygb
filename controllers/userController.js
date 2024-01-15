@@ -6,9 +6,7 @@ const register = async (req, res) => {
   const { username, email, password, phone, address, city, card } = req.body;
   const validate = await User.findOne({ email: email });
   if (validate) {
-    const error = new Error(
-      `Ya existe un usuario registrado con este correo $(${email})`
-    );
+    const error = new Error(`Ya existe un usuario registrado con (${email})`);
     return res.status(400).json({ msg: error.message });
   }
   const bcryptSalt = bcrypt.genSaltSync(4);
